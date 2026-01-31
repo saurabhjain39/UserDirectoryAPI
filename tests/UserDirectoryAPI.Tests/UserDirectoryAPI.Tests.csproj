@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Castle.Core" Version="5.1.1" />
+		<PackageReference Include="xunit" Version="2.6.2" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.8.0">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Moq" Version="4.*" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\UserDirectoryAPI.Application\UserDirectoryAPI.Application.csproj" />
+		<ProjectReference Include="..\..\UserDirectoryAPI.Domain\UserDirectoryAPI.Domain.csproj" />
+		<ProjectReference Include="..\..\UserDirectoryAPI.Infrastructure\UserDirectoryAPI.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\UserDirectoryAPI.API\UserDirectoryAPI.API.csproj" />
+	</ItemGroup>
+
+</Project>
