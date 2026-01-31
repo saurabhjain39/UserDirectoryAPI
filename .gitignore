@@ -1,0 +1,16 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+
+# EF Core local database
+data/app.db
+
+# OS files
+Thumbs.db
+Desktop.ini
