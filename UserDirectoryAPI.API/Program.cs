@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using UserDirectoryAPI.API.Middleware;
 using UserDirectoryAPI.Application.Interfaces;
 using UserDirectoryAPI.Infrastructure.Data;
 using UserDirectoryAPI.Infrastructure.Repositories;
@@ -21,6 +22,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseSwagger();
 app.UseSwaggerUI();
